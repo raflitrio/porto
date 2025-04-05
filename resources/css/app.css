@@ -1,0 +1,122 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@layer base {
+    body {
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
+@layer components {
+
+    a {
+        position: relative;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      }
+  
+      a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0%;
+        height: 2px;
+        background-color: #3498db;
+        transition: width 0.3s ease;
+      }
+  
+      a:hover::after {
+        width: 100%;
+      }
+
+
+    .header-banner {
+        background-image: url('/public/images/bglaravel.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        
+    }
+
+    .top-navigation {
+        top: 0;
+        color: black;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        position: sticky;
+        padding: 30px;
+        background-color: azure;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+
+    .what {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 15%;
+        margin-top: 300px;
+        flex-wrap: wrap; 
+        gap: 2rem; 
+    }
+    
+    .what-text {
+        font-family: 'Poppins',sans-serif;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        padding: 50px;
+    }
+
+    .what-text h1 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    
+    .what img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    
+
+    
+
+    .who h2 {
+        font-family: 'Poppins',sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .who article {
+        font-weight: 200;
+        text-align: center;
+        margin-top: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+        text-align: justify;
+    }
+
+}
+
