@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Contact - My Site</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 </head>
 <body>
     <h1>Contact Us</h1>
